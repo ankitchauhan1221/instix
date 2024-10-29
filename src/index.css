@@ -1,0 +1,38 @@
+/* index.css or app.css */
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+body {
+  @apply font-poppins; /* Apply Poppins font to the body */
+  @apply bg-[#0a0b0d] text-white; /* Optional: Set body background and text color */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start at the initial position */
+  }
+  100% {
+    transform: translateX(-50%); /* Slide left by half the width */
+  }
+}
+
+.animate-slide {
+  display: flex; /* Use flexbox to align items */
+  width: 200%; /* Ensure the width is double to hold two items */
+  animation: slide 10s linear infinite; /* Infinite sliding effect */
+  overflow: hidden; /* Hide overflow */
+}
+
+.text-container {
+  white-space: nowrap; /* Prevent text wrapping */
+  padding: 0 50px; /* Space between repeated texts */
+}
+
+
